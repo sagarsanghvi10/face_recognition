@@ -17,23 +17,20 @@ def face_recognition_function(known_image_loc, unknown_image_loc, copy_image_loc
   """
   The above function is to compare faces and return the pictures which has the face based on the tolerance.
   
-  INPUT: {
-      known_face_dir: This location argument should be a path to the directory where a known image is present and good to have one image of the person you want to recognize.
+  INPUT: 
+  known_face_dir: This location argument should be a path to the directory where a known image is present and good to have one image of the person you want to recognize.
                       
-      unknown_faces_dir: This location argument should be a path to the directory where you want to compare the faces from known_face_dir. This directory should have multiple images.
-                         
-      transfer_dir: This location argument should be the path to the directory where all matching images will be transfered to.
+  unknown_faces_dir: This location argument should be a path to the directory where you want to compare the faces from known_face_dir. This directory should have multiple images.
+                       
+  transfer_dir: This location argument should be the path to the directory where all matching images will be transfered to.
       
-      size: This default argument can be specified to resize the images when they are opened as they may provide better accuracy in recognising faces.
-            (takes in int values)
-            
-      tolerance: This default argument can be specified to measure how similar the compared faces are (i.e. 60%/ 0.6). lower the better.
-                (takes in float values)
-  }
+  size: This default argument can be specified to resize the images when they are opened as they may provide better accuracy in recognising faces (takes in int values).
+
+  tolerance: This default argument can be specified to measure how similar the compared faces are (i.e. 60%/ 0.6) lower the better (takes in float values).
   
-  OUTPUT: {
-        This function populates the transfer_dir with all matching imagees. 
-  }
+  OUTPUT: 
+  This function populates the transfer_dir with all matching imagees. 
+  
   """
   # open all images 
   for i in os.listdir(image_path):
